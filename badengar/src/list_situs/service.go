@@ -26,5 +26,5 @@ func Showlist(id int) (d interface{}, e error) {
 func Getphoto(c echo.Context) (e error) {
 	ifile := c.Param("namafoto")
 	fmt.Println("masuk")
-	return c.File("/home/programmerjalanan/go/src/badengar.com/badengar/foto/" + ifile)
+	return c.File("/home/ubuntu/go/src/badengar.com/badengar/foto/" + ifile)
 }
