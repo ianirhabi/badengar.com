@@ -7,7 +7,7 @@ import (
 )
 
 func init() {
-	orm.RegisterDataBase("default", "mysql", "root:ian!@#$%^@tcp(localhost:3306)/badengar_app?charset=utf8")
+	orm.RegisterDataBase("default", "mysql", "root:ian!@#$%^@tcp(18.188.151.231:3306)/badengar_app?charset=utf8")
 }
 
 func main() {

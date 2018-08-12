@@ -19,8 +19,9 @@ func Login(c echo.Context) (e error) {
 
 func Regis(c echo.Context) (e error) {
 	var r RequestRegis
+	imei := c.Param("imei")
 	if err := c.Bind(&r); err == nil {
-		if cc, m := PostRegis(r); m == nil {
+		if cc, m := PostRegis(r, imei); m == nil {
 			return c.JSON(http.StatusOK, &cc)
 		}
 	}

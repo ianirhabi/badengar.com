@@ -13,11 +13,11 @@ func Showlist(id int) (d interface{}, e error) {
 	var cc []*model.SitusList
 	var b Respons
 	if _, d := o.Raw("SELECT * FROM situs_list where id_user = ?", id).QueryRows(&cc); d == nil {
-		fmt.Println("debug error === ", d)
+		fmt.Println("debug error show list === ", d)
 		b.Status = "berhasil"
 		b.Data = cc
 	} else {
-		fmt.Println("debug error === ", d)
+		fmt.Println("debug error gagal === ", d)
 		b.Status = "gagal"
 	}
 	return b, e
