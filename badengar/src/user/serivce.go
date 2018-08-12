@@ -21,7 +21,7 @@ func PostRegis(a RequestRegis, imei string) (res interface{}, e error) {
 	var validasi []*model.BadengarUser
 
 	if f, d := o.Raw("SELECT * FROM badengar_user where username =?", imei).QueryRows(&validasi); d == nil {
-		fmt.Println("imeinya ", f, d, imei, validasi[0].Id)
+		fmt.Println("imeinya ", f, d, imei)
 		//Conversi Interface
 		// var token = map[string]interface{}{
 		// 	"nama": *validasi[0],
