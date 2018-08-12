@@ -49,6 +49,8 @@ func PostRegis(a RequestRegis, imei string) (res interface{}, e error) {
 			imeinya := model.BadengarUser{Id: validasi[0].Id}
 			if o.Read(&imeinya) == nil {
 				imeinya.Password = a.Password
+				imeinya.Tanggal = a.Tanggal
+				imeinya.Jam = a.Jam
 				if _, err := o.Update(&imeinya); err == nil {
 					data.Status = "berhasil update"
 					data.Data = &imeinya
