@@ -13,4 +13,8 @@ type RequestRegis struct {
 	Nama     string `json:nama`
 	Username string `json:username`
 	Password string `json:password`
+	Simsatu  string `json:sim1`
+	Simdua   string `json:sim2`
+	Tanggal  string `json:tanggal`
+	Jam      string `json:jam`
 }

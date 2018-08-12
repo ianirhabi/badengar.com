@@ -35,7 +35,9 @@ func PostRegis(a RequestRegis, imei string) (res interface{}, e error) {
 			fmt.Println("masuk sini")
 			user := model.BadengarUser{Nama: a.Nama,
 				Username: a.Username,
-				Password: a.Password}
+				Password: a.Password,
+				Tanggal:  a.Tanggal,
+				Jam:      a.Jam}
 			if df, e := o.Insert(&user); e == nil {
 				data.Status = "berhasil insert"
 				data.Data = &user
